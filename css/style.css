@@ -62,3 +62,12 @@ header {
 button {
     cursor: pointer;
 }
+.close-cart {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
