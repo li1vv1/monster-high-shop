@@ -39,4 +39,26 @@ header {
     position: absolute;
     top: 0;
     right: 0;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+.cart {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 24px;
+    border-radius: 12px;
+    width: 600px;
+}
+.cart.open {
+    display: block;
+}
+button {
+    cursor: pointer;
 }
