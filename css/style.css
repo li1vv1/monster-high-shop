@@ -2,3 +2,27 @@ body {
     background-color: black;
     color:white;
 }
+.product-card {
+    border: 1px solid white;
+    padding: 16px;
+    border-radius: 12px;
+}
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    text-align: center;
+}
+.product-card button {
+    background-color: white;
+    color:black;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+header {
+    text-align: center;
+}
+.catalog h2 {
+    grid-column: 1 / -1;
+}
