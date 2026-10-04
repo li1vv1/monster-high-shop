@@ -50,8 +50,9 @@ function updateCart() {
     let html = "";
     for (let i = 0; i < cart.length; i++) {
         html += "<p>" + cart[i].name + " — " + cart[i].quantity + " шт. ";
-        html += "<button onclick='increaseQuantity(" + i + ")'>+</button> ";
-        html += "<button onclick='removeFromCart(" + i + ")'>-</button></p>";
+        html += "<button class='qty-btn' onclick='increaseQuantity(" + i + ")'>+</button> ";
+        html += "<button class='qty-btn' onclick='removeFromCart(" + i + ")'>-</button> ";
+        html += "<button onclick='deleteFromCart(" + i + ")'>Удалить</button></p>";
     }
     cartItemsDiv.innerHTML = html;
 
@@ -79,4 +80,8 @@ orderFormElement.addEventListener("submit", function(event) {
     orderFormElement.reset();
     orderForm.classList.remove("open");
 });
+function deleteFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+}
 updateCart();
