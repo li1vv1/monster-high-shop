@@ -5,6 +5,10 @@ const cartTotalSpan = document.querySelector(".cart-total");
 const cartButton = document.querySelector(".cart-button");
 const cartWindow = document.querySelector(".cart");
 const closeButton = document.querySelector(".close-cart");
+const checkoutButton = document.querySelector(".checkout-button");
+const orderForm = document.querySelector(".order-form");
+const closeOrderButton = document.querySelector(".close-order");
+const orderFormElement = document.querySelector(".order-form form");
 
 cartButton.addEventListener("click", function() {
     cartWindow.classList.add("open");
@@ -57,3 +61,20 @@ function updateCart() {
     }
     cartTotalSpan.textContent = total;
 }
+checkoutButton.addEventListener("click", function() {
+    cartWindow.classList.remove("open");
+    orderForm.classList.add("open");
+});
+
+closeOrderButton.addEventListener("click", function() {
+    orderForm.classList.remove("open");
+});
+
+orderFormElement.addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Заказ создан!");
+    cart = [];
+    updateCart();
+    orderFormElement.reset();
+    orderForm.classList.remove("open");
+});

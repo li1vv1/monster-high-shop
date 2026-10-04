@@ -81,3 +81,46 @@ button {
     height: 28px;
     font-size: 16px;
 }
+.order-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 24px;
+    border-radius: 12px;
+    width: 400px;
+}
+.order-form.open {
+    display: block;
+}
+.close-order {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+.checkout-button {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    margin-top: 16px;
+}
+.order-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.order-form button[type="submit"] {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+}
