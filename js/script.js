@@ -1,4 +1,4 @@
-let cart = [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const cartItemsDiv = document.querySelector(".cart-items");
 const cartTotalSpan = document.querySelector(".cart-total");
@@ -60,6 +60,7 @@ function updateCart() {
         total += cart[i].price * cart[i].quantity;
     }
     cartTotalSpan.textContent = total;
+    localStorage.setItem("cart", JSON.stringify(cart));
 }
 checkoutButton.addEventListener("click", function() {
     cartWindow.classList.remove("open");
@@ -78,3 +79,4 @@ orderFormElement.addEventListener("submit", function(event) {
     orderFormElement.reset();
     orderForm.classList.remove("open");
 });
+updateCart();
