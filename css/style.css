@@ -102,6 +102,38 @@ button {
 .order-form.open {
     display: block;
 }
+.order-success {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 24px;
+    border-radius: 12px;
+    width: 400px;
+    text-align: center;
+}
+.order-success.open {
+    display: block;
+}
+.close-success {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+.ok-success {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    margin-top: 8px;
+}
 .close-order {
     position: absolute;
     top: 8px;
@@ -159,11 +191,11 @@ footer {
     h2 {
         font-size: 22px;
     }
-    .cart, .order-form {
+    .cart, .order-form, .order-success {
     width: 90%;
     max-width: 320px;
     }
-    .cart h2, .order-form h2 {
+    .cart h2, .order-form h2, .order-success h2 {
     font-size: 20px;
     margin-top: 24px;
     }

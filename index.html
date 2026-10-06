@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Monster High Shop</title>
+        <link rel="icon" type="image/png" href="images/favicon.png">
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
     </head>
@@ -42,7 +43,7 @@
                 <article class="product-card">
                     <img src="images/clown.jpg" alt="Skullector Shorty Doll, Killer Klowns">
                     <h3>Skullector Shorty Doll, Killer Klowns</h3>
-                    <p>10 343.</p>
+                    <p>10 343 руб.</p>
                     <button onclick="addToCart('Skullector Shorty Doll, Killer Klowns', 10343)">Добавить в корзину</button>
                 </article>
                 <article class="product-card">
@@ -137,6 +138,12 @@
                 <input type="tel" id="phone" name="phone">
                 <button type="submit">Создать заказ</button>
             </form>
+        </section>
+        <section class="order-success">
+            <button class="close-success">✕</button>
+            <h2>Заказ создан!</h2>
+            <p>Спасибо за покупку!</p>
+            <button class="ok-success">Отлично</button>
         </section>
         <script src="js/script.js"></script>
     </body>

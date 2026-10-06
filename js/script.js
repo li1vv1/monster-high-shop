@@ -9,6 +9,9 @@ const checkoutButton = document.querySelector(".checkout-button");
 const orderForm = document.querySelector(".order-form");
 const closeOrderButton = document.querySelector(".close-order");
 const orderFormElement = document.querySelector(".order-form form");
+const successWindow = document.querySelector(".order-success");
+const closeSuccessButton = document.querySelector(".close-success");
+const okSuccessButton = document.querySelector(".ok-success");
 
 cartButton.addEventListener("click", function() {
     cartWindow.classList.add("open");
@@ -74,14 +77,18 @@ closeOrderButton.addEventListener("click", function() {
 
 orderFormElement.addEventListener("submit", function(event) {
     event.preventDefault();
-    alert("Заказ создан!");
     cart = [];
     updateCart();
     orderFormElement.reset();
     orderForm.classList.remove("open");
+    successWindow.classList.add("open");
 });
-function deleteFromCart(index) {
-    cart.splice(index, 1);
-    updateCart();
-}
+
+closeSuccessButton.addEventListener("click", function() {
+    successWindow.classList.remove("open");
+});
+
+okSuccessButton.addEventListener("click", function() {
+    successWindow.classList.remove("open");
+});
 updateCart();
